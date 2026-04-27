@@ -11,8 +11,8 @@ class AetherCore:
         self.time_passed += dt
 
     def draw(self, surface):
-        pulse = math.sin(self.time_passed * 4)*4
-        current_radius = self.base_radius+pulse
-        glow_radius = current_radius*3.5
+        pulse = math.sin(self.time_passed * 4) * 4
+        current_radius = self.base_radius + pulse
+        glow_radius = current_radius * 3.5
 
         draw_glow_circle(surface, config.CORE_COLOR, (self.x, self.y), current_radius, glow_radius)

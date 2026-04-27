@@ -3,7 +3,7 @@ from engine.trig_math import polar_to_cartesian
 
 class Asteroid:
     def __init__(self, note_data):
-        self.hit_time = note_data['hit_time']
+        self.hit_time = note_data['hit_time'] + config.TRAVEL_TIME
         self.spawn_time = self.hit_time - config.TRAVEL_TIME
         self.angle = note_data['angle']
         self.base_radius = note_data['radius']
